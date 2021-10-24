@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class InGameUI : MonoBehaviour
 {
@@ -22,6 +24,9 @@ public class InGameUI : MonoBehaviour
         OptionsUI.enabled = false;
         PauseGame = false;
         QuitUI.enabled = false;
+
+        PauseMenuActive.value = false;
+        MouseToggel();
     }
 
     private void Update()
@@ -36,13 +41,14 @@ public class InGameUI : MonoBehaviour
                     Time.timeScale = 1;
                     PauseGame = false;
                     PauseMenuActive.value = false;
+                    MouseToggel();
                     break;
                 case false:
                     ShowPauseMenu();
                     Time.timeScale = 0;
                     PauseGame = true;
                     PauseMenuActive.value = true;
-
+                    MouseToggel();
                     break;
             }
         }
@@ -60,6 +66,7 @@ public class InGameUI : MonoBehaviour
         Time.timeScale = 1;
         PauseGame = false;
         PauseMenuActive.value = false;
+        MouseToggel();
     }
 
     private void ShowHealthAndStaminaUI()
@@ -74,5 +81,32 @@ public class InGameUI : MonoBehaviour
         PauseMenuUI.enabled = false;
         OptionsUI.enabled = false;
         QuitUI.enabled = false;
+    }
+
+    private void MouseToggel()
+    {
+        switch (PauseMenuActive.value)
+        {
+            case false:
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                break;
+            case true:
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+                break;
+        }
+    }
+
+    public void QuitToMainMenu()
+    {
+        PauseMenuActive.value = false;
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
+    }
+
+    public void QuitToDesctop()
+    {
+        Application.Quit();
     }
 }
