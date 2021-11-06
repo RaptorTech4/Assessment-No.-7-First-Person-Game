@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8fd791183168ea439277cad8238e5e5, type: 3}
-  m_Name: Health
+  m_Script: {fileID: 11500000, guid: e00a869695cf01e4aa19701f97ad1f30, type: 3}
+  m_Name: FinalScore
   m_EditorClassIdentifier: 
   value: 0

@@ -33,7 +33,6 @@ public class InGameUI : MonoBehaviour
     {
         if (Input.GetButtonUp("PauseMenu"))
         {
-            Debug.Log("work");
             switch (PauseGame)
             {
                 case true:
