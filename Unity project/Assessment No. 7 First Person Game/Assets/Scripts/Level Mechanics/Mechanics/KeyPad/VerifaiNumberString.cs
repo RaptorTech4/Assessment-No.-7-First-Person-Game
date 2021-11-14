@@ -12,6 +12,7 @@ public class VerifaiNumberString : MonoBehaviour
     BoolObject UnlockLock;
     [SerializeField]
     stringObject tipedInpassword;
+
     [Header("Audio")]
     AudioSource audioOutput;
     [SerializeField]
