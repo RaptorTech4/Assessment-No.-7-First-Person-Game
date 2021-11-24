@@ -26,6 +26,12 @@ public class PlayerWithPuzzelInteraction : MonoBehaviour
                     {
                         RotateWheel(hit.transform.gameObject);
                     }
+
+                    if (hit.transform.gameObject.tag == "TablePuzzelButtons")
+                    {
+                        ButtonOnTable(hit.transform.gameObject);
+                    }
+                    
                 }
             }
         }
@@ -60,5 +66,10 @@ public class PlayerWithPuzzelInteraction : MonoBehaviour
         {
             hit.GetComponent<RotateWheel>().RotateTheWheel();
         }
+    }
+
+    public void ButtonOnTable(GameObject hit)
+    {
+        hit.GetComponent<ButtonPressed>().SetMoveDirectionOn();
     }
 }

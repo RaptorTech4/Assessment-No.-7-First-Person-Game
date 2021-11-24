@@ -1,0 +1,272 @@
+fileFormatVersion: 2
+guid: a4d087031be201340afaf29b707dc734
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BackWall1
+    second: {fileID: 2100000, guid: 8164d984054932140b4c8dca1ac93c52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorFrame1
+    second: {fileID: 2100000, guid: c8f2dcd47eac4d84fa87ae0212f50f9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FirePlaceDoodHolder1
+    second: {fileID: 2100000, guid: 39b34c369f249f94b857db61cfd9bad7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FirePlaceLeftDoorFrame1
+    second: {fileID: 2100000, guid: 9d4fa89ea08f5884d9eaff94658f9c1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FirePlaceLeftDoorGlass1
+    second: {fileID: 2100000, guid: 0881fe15c1882a54abb7ce00943b7b63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FirePlaceRightDoodGlass
+    second: {fileID: 2100000, guid: 8a0119435e24ffc4d8ac0e454db8f7de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FirePlaceRightDoorFrame
+    second: {fileID: 2100000, guid: d04e8caf07a96cb4fa530709d020ba8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fireplace1
+    second: {fileID: 2100000, guid: 0cad93861398d624c833f24ab13ca2ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor1
+    second: {fileID: 2100000, guid: 0849980a549ece045bf650e151dbec6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HintButton1
+    second: {fileID: 2100000, guid: 45e07321a6c1f9e43a398e34a310f3cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HintPannel1
+    second: {fileID: 2100000, guid: 695eddd8ff111264e8e909eaee8678ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LeftLeftBookself1
+    second: {fileID: 2100000, guid: 2993ac19eac59de4480944e2c91a6c11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LeftRightBookself1
+    second: {fileID: 2100000, guid: 0c553c66ec659e54a8859961188677b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LeftWheel1Mat
+    second: {fileID: 2100000, guid: e86d25b7c66836d47a9c2954c2418cb5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LeftWheel2Mat
+    second: {fileID: 2100000, guid: 0d598d063a426e549ac321e489bd6142, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LeftWheel3Mat
+    second: {fileID: 2100000, guid: 1ba589545ba41d047928705333de071c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LeftWheel4Mat
+    second: {fileID: 2100000, guid: 6792aa05d5b942a498224b8079c774f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LeftWheelHolder
+    second: {fileID: 2100000, guid: a2fc51201a341af43b5bd2ebbd66ec63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RightLeftBookself1
+    second: {fileID: 2100000, guid: c3e5cbbd899f316469e8dab3c42b8a55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RightRightBookself1
+    second: {fileID: 2100000, guid: 15e146b3eace83e43888dd5025639902, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RightWall
+    second: {fileID: 2100000, guid: 6baa406d25b38934689945a34e59165b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RightWheel1Mat
+    second: {fileID: 2100000, guid: 687b4c434761fb94e8dc0f67c46a1f47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RightWheel2Mat
+    second: {fileID: 2100000, guid: bbf6c37e06d5e984bb4539e3790b1841, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RightWheel3Mat
+    second: {fileID: 2100000, guid: 1dbff55f0a6e71243ab6b12a3f9a758c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RightWheel4Mat
+    second: {fileID: 2100000, guid: b14a89586ffc22841849a3433f7d9bdf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RightWheelHolder
+    second: {fileID: 2100000, guid: a6eec4b4c6c3aa2428261a029cebd3a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof1
+    second: {fileID: 2100000, guid: 907c7498b2cfe104baa2de5a38c83e21, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoomDoorLeft
+    second: {fileID: 2100000, guid: 5ca6936e801ac68448f58d382af291ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoomDoorRight
+    second: {fileID: 2100000, guid: d26390417a308ee4495747e679dd64ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TimeRemaining1
+    second: {fileID: 2100000, guid: 487c553814110ba4a9e05814ec5d507f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TimeRemainingBeforeNextHint1
+    second: {fileID: 2100000, guid: 02585cafbec3301409d965480be62fd0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallRail
+    second: {fileID: 2100000, guid: a05521426dec2fa4b86c06289d679adb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallWithDoor1
+    second: {fileID: 2100000, guid: f2de29988e2a1c44caca1bf4b5dc871d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phong1
+    second: {fileID: 2100000, guid: 614866aba2cfd8b45a1628ee808b8d1a, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 0
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

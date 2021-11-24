@@ -6,6 +6,7 @@ TagManager:
   tags:
   - KeyPad
   - WheelPuzzel
+  - TablePuzzelButtons
   layers:
   - Default
   - TransparentFX

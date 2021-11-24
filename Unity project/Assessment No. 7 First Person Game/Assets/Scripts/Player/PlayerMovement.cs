@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Camera")]
     public Camera playerCamera;
     public float lookSpeed = 2.0f;
-    public float lookXLimit = 45.0f;
+    public float lookXLimit = 75.0f;
 
     [Header("Outside var that impact player")]
     public BoolObject PauseMenuActive;
@@ -49,11 +49,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Movement();
         }
-    
-        
     }
-
-    
 
     public void Movement()
     {
@@ -81,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
             moveDirection.y = movementDirectionY;
         }
 
-        characterController.height = isCrouch ? 1f : 2f;
+        characterController.height = isCrouch ? 1f : 1.75f;
 
         if (!characterController.isGrounded)
         {
