@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db17f566c7326214586b57aedbc4eaf4, type: 3}
   m_Name: CanMove
   m_EditorClassIdentifier: 
-  value: 1
+  value: 0

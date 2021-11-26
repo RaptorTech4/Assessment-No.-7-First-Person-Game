@@ -7,6 +7,9 @@ TagManager:
   - KeyPad
   - WheelPuzzel
   - TablePuzzelButtons
+  - Puck
+  - Help
+  - ActivateTable
   layers:
   - Default
   - TransparentFX

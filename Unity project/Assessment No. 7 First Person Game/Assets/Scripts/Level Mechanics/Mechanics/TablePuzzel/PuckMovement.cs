@@ -18,6 +18,8 @@ public class PuckMovement : MonoBehaviour
 
     Vector3 movePuckTo;
 
+    public LayerMask raycastNotToHit;
+
     void Start()
     {
         canMove.value = true;
@@ -83,9 +85,9 @@ public class PuckMovement : MonoBehaviour
         RaycastHit hit;
         Vector3 puckSpace;
 
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out hit, Mathf.Infinity))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, raycastNotToHit))
         {
-            puckSpace = new Vector3(-0.04f, 0f, 0f);
+            puckSpace = new Vector3(0.04f, 0f, 0f);
             CalcilatPositionToMove(hit.point, puckSpace);
         }
         moveLeft.value = false;
@@ -96,9 +98,9 @@ public class PuckMovement : MonoBehaviour
         RaycastHit hit;
         Vector3 puckSpace;
 
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out hit, Mathf.Infinity))
         {
-            puckSpace = new Vector3(0.04f, 0f, 0f);
+            puckSpace = new Vector3(-0.04f, 0f, 0f);
             CalcilatPositionToMove(hit.point, puckSpace);
         }
         moveRight.value = false;

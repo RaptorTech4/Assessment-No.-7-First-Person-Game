@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Camera")]
     public Camera playerCamera;
     public float lookSpeed = 2.0f;
-    public float lookXLimit = 75.0f;
+    public float lookXLimit = 90.0f;
 
     [Header("Outside var that impact player")]
     public BoolObject PauseMenuActive;

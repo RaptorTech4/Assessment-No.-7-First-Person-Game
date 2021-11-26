@@ -18,13 +18,16 @@ public class LockControl : MonoBehaviour
     [SerializeField]
     private int[] currectCombination;
 
+    [SerializeField]
+    BoolObject PuzzleCompleet;
+
     private int[] result;
 
-    private bool SetRizalt;
 
     private void Start()
     {
         result = new int[] { Wheel1.value, Wheel2.value, Wheel3.value, Wheel4.value };
+
     }
 
     private void Update()
@@ -39,22 +42,13 @@ public class LockControl : MonoBehaviour
 
             if (result[0] == currectCombination[0] && result[1] == currectCombination[1] && result[2] == currectCombination[2] && result[3] == currectCombination[3])
             {
-                print("Left Wheel unlocked ");
-                if (SetRizalt)
-                {
-                    SetPuzzelAsCompleet();
-                }
+                PuzzleCompleet.value = true;
             }
             else
             {
-                SetRizalt = false;
+                PuzzleCompleet.value = false;
             }
             valueChanged.value = false;
         }
-    }
-
-    private void SetPuzzelAsCompleet()
-    {
-
     }
 }

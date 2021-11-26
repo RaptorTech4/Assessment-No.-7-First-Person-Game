@@ -7,14 +7,19 @@ public class PlayerWithPuzzelInteraction : MonoBehaviour
 
     public GameObject playerCamera;
 
+    public LayerMask raycastNotToHit;
+
     // Update is called once per frame
     void Update()
     {
         RaycastHit hit;
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 10.0f))
+            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 10.0f, raycastNotToHit))
             {
+
+                //Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward, Color.green);
+
                 if (hit.collider != null)
                 {
                     if (hit.transform.gameObject.tag == "KeyPad")
@@ -31,7 +36,17 @@ public class PlayerWithPuzzelInteraction : MonoBehaviour
                     {
                         ButtonOnTable(hit.transform.gameObject);
                     }
-                    
+
+                    if (hit.transform.gameObject.tag == "Help")
+                    {
+                        HelpButton(hit.transform.gameObject);
+                    }
+
+                    if (hit.transform.gameObject.tag == "ActivateTable")
+                    {
+                        ActivateTable(hit.transform.gameObject);
+                    }
+
                 }
             }
         }
@@ -71,5 +86,15 @@ public class PlayerWithPuzzelInteraction : MonoBehaviour
     public void ButtonOnTable(GameObject hit)
     {
         hit.GetComponent<ButtonPressed>().SetMoveDirectionOn();
+    }
+
+    public void HelpButton(GameObject hit)
+    {
+        hit.GetComponent<HelpTimer>().ButtonPressedCheck();
+    }
+
+    public void ActivateTable(GameObject hit)
+    {
+        hit.GetComponent<SetTableActive>().SetPuckActive();
     }
 }
