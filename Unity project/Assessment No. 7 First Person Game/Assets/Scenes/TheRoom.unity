@@ -31111,6 +31111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ----Level Mechanics----
       objectReference: {fileID: 0}
+    - target: {fileID: 8517453124835247050, guid: 2a8d1600bd11f114ba6e7fcd38e3d0d8, type: 3}
+      propertyPath: AmountOfHintsTamen
+      value: 
+      objectReference: {fileID: 11400000, guid: 373374615919d9c40a2931ea3066921f, type: 2}
     - target: {fileID: 8517453125189511734, guid: 2a8d1600bd11f114ba6e7fcd38e3d0d8, type: 3}
       propertyPath: PuzzleOneA
       value: 

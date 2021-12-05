@@ -17,8 +17,10 @@ public class PuckMovement : MonoBehaviour
     BoolObject moveDown;
 
     Vector3 movePuckTo;
+    Vector3 puckSpace;
 
     public LayerMask raycastNotToHit;
+    RaycastHit hit;
 
     void Start()
     {
@@ -56,57 +58,45 @@ public class PuckMovement : MonoBehaviour
 
     void MoveUp()
     {
-        RaycastHit hit;
-        Vector3 puckSpace;
-
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, Mathf.Infinity))
         {
             puckSpace = new Vector3(0f,0f, -0.04f);
-            CalcilatPositionToMove(hit.point, puckSpace); 
+            CalculatePositionToMove(hit.point, puckSpace); 
         }
         moveUp.value = false;
     }
 
     void MoveDown()
     {
-        RaycastHit hit;
-        Vector3 puckSpace;
-
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, Mathf.Infinity))
         {
             puckSpace = new Vector3(0f, 0f, 0.04f);
-            CalcilatPositionToMove(hit.point, puckSpace);
+            CalculatePositionToMove(hit.point, puckSpace);
         }
         moveDown.value = false;
     }
 
     void MoveLeft()
     {
-        RaycastHit hit;
-        Vector3 puckSpace;
-
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, raycastNotToHit))
         {
             puckSpace = new Vector3(0.04f, 0f, 0f);
-            CalcilatPositionToMove(hit.point, puckSpace);
+            CalculatePositionToMove(hit.point, puckSpace);
         }
         moveLeft.value = false;
     }
 
     void MoveRight()
     {
-        RaycastHit hit;
-        Vector3 puckSpace;
-
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out hit, Mathf.Infinity))
         {
             puckSpace = new Vector3(-0.04f, 0f, 0f);
-            CalcilatPositionToMove(hit.point, puckSpace);
+            CalculatePositionToMove(hit.point, puckSpace);
         }
         moveRight.value = false;
     }
 
-    void CalcilatPositionToMove(Vector3 hitpoint, Vector3 direction)
+    void CalculatePositionToMove(Vector3 hitpoint, Vector3 direction)
     {
         canMove.value = false;
         movePuckTo = new Vector3(hitpoint.x - direction.x, hitpoint.y - direction.y, hitpoint.z - direction.z);
