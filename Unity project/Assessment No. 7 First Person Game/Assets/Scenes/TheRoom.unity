@@ -35611,6 +35611,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3204456866066509225, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204456866066509237, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3204456866202810646, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -41694,6 +41702,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b65f71fe075bf4d439cd5734f677bf45, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc9ad9a9f65e65049a74c3d234b6a35b, type: 2}
     - target: {fileID: 919132149155446097, guid: b65f71fe075bf4d439cd5734f677bf45, type: 3}
       propertyPath: m_Name
       value: HintInfoPannel
@@ -41703,6 +41715,11 @@ PrefabInstance:
 --- !u!4 &1896658070 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f71fe075bf4d439cd5734f677bf45, type: 3}
+  m_PrefabInstance: {fileID: 1896658069}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1896658071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b65f71fe075bf4d439cd5734f677bf45, type: 3}
   m_PrefabInstance: {fileID: 1896658069}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1898731948
@@ -50106,6 +50123,7 @@ GameObject:
   - component: {fileID: 2147012499}
   - component: {fileID: 7024001320168865591}
   - component: {fileID: 7024001320168865592}
+  - component: {fileID: 7024001320168865593}
   m_Layer: 0
   m_Name: ButtonFrame
   m_TagString: Help
@@ -50140,6 +50158,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeRemaining: {fileID: 11400000, guid: d0c43d227f887664a8f69e13c8c8693c, type: 2}
+--- !u!114 &7024001320168865593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7024001320168865590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ea0cfda308dce641ba5f40df9d83607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HintTimer: {fileID: 11400000, guid: d0c43d227f887664a8f69e13c8c8693c, type: 2}
+  CurrentPuzzelOn: {fileID: 11400000, guid: a88f406bb28e76842bca28996b8955ad, type: 2}
+  AmountOfHintsTaken: {fileID: 11400000, guid: 373374615919d9c40a2931ea3066921f, type: 2}
+  HintPannelBoard: {fileID: 1896658071}
+  defaltHintMat: {fileID: 2100000, guid: bc9ad9a9f65e65049a74c3d234b6a35b, type: 2}
+  FirsHintMat: {fileID: 2100000, guid: d465e2bf57aec31428ad42e959f942f4, type: 2}
+  SecondHintMat: {fileID: 2100000, guid: 7c97c318e24c87e4785a2726b1799b8f, type: 2}
+  ThirdHintMat: {fileID: 2100000, guid: a840bce9b69a7414393437a1f3e56b96, type: 2}
+  FourthHintMat: {fileID: 2100000, guid: 7b2461457d9b18340a6ffd4469244a3b, type: 2}
 --- !u!23 &7047472728051403588
 MeshRenderer:
   m_ObjectHideFlags: 0

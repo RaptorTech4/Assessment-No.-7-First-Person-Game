@@ -12,6 +12,23 @@ public class HintButtonPressed : MonoBehaviour
     [SerializeField]
     IntObject AmountOfHintsTaken;
 
+    [SerializeField]
+    GameObject HintPannelBoard;
+
+    [Header("HintMaterials")]
+    [SerializeField]
+    Material defaltHintMat;
+    [SerializeField]
+    Material FirsHintMat;
+    [SerializeField]
+    Material SecondHintMat;
+    [SerializeField]
+    Material ThirdHintMat;
+    [SerializeField]
+    Material FourthHintMat;
+
+
+
     void Start()
     {
         AmountOfHintsTaken.value = 0;
