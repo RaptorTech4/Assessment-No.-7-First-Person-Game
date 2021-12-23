@@ -90,6 +90,7 @@ public class PlayerWithPuzzelInteraction : MonoBehaviour
 
     public void HelpButton(GameObject hit)
     {
+        hit.GetComponent<HintButtonPressed>().ShowHint();
         hit.GetComponent<HelpTimer>().ButtonPressedCheck();
     }
 
