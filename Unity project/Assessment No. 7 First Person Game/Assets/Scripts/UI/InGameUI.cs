@@ -13,19 +13,28 @@ public class InGameUI : MonoBehaviour
     Canvas OptionsUI;
     [SerializeField]
     Canvas QuitUI;
+    [SerializeField]
+    Canvas PagesUI;
 
     bool PauseGame = false;
+    bool PagesActive = false;
     public BoolObject PauseMenuActive;
 
     private void Start()
     {
+        //----UI----
         HealthAndStaminaUI.enabled = true;
         PauseMenuUI.enabled = false;
         OptionsUI.enabled = false;
-        PauseGame = false;
         QuitUI.enabled = false;
+        PagesUI.enabled = false;
+        //----UI----
 
+        PauseGame = false;
         PauseMenuActive.value = false;
+
+        PagesActive = false;
+
         MouseToggel();
     }
 
@@ -48,6 +57,27 @@ public class InGameUI : MonoBehaviour
                     PauseGame = true;
                     PauseMenuActive.value = true;
                     MouseToggel();
+                    break;
+            }
+        }
+
+        if(Input.GetButtonUp("Page"))
+        {
+            switch (PagesActive)
+            {
+                case true:
+                    DeactivateAllUI();
+                    PauseMenuActive.value = false;
+                    MouseToggel();
+                    PagesActive = false;
+                    ShowHealthAndStaminaUI();
+                    break;
+                case false:
+                    DeactivateAllUI();
+                    PauseMenuActive.value = true;
+                    MouseToggel();
+                    PagesUI.enabled = true;
+                    PagesActive = true;
                     break;
             }
         }
@@ -78,6 +108,7 @@ public class InGameUI : MonoBehaviour
     {
         HealthAndStaminaUI.enabled = false;
         PauseMenuUI.enabled = false;
+        PagesUI.enabled = false;
         OptionsUI.enabled = false;
         QuitUI.enabled = false;
     }
@@ -95,6 +126,15 @@ public class InGameUI : MonoBehaviour
                 Cursor.visible = true;
                 break;
         }
+    }
+
+    public void HidePages()
+    {
+        DeactivateAllUI();
+        PauseMenuActive.value = false;
+        MouseToggel();
+        PagesActive = false;
+        ShowHealthAndStaminaUI();
     }
 
     public void QuitToMainMenu()

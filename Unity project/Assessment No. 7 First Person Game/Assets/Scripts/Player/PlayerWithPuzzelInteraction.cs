@@ -47,6 +47,11 @@ public class PlayerWithPuzzelInteraction : MonoBehaviour
                         ActivateTable(hit.transform.gameObject);
                     }
 
+                    if (hit.transform.gameObject.tag == "Papper")
+                    {
+                        ActivatePapper(hit.transform.gameObject);
+                    }
+
                 }
             }
         }
@@ -97,5 +102,10 @@ public class PlayerWithPuzzelInteraction : MonoBehaviour
     public void ActivateTable(GameObject hit)
     {
         hit.GetComponent<SetTableActive>().SetPuckActive();
+    }
+
+    public void ActivatePapper(GameObject hit)
+    {
+        hit.GetComponent<PapperColection>().PapperColected();
     }
 }

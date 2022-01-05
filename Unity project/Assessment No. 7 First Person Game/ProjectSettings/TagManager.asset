@@ -10,6 +10,7 @@ TagManager:
   - Puck
   - Help
   - ActivateTable
+  - Papper
   layers:
   - Default
   - TransparentFX
