@@ -15,71 +15,92 @@ public class InGameUI : MonoBehaviour
     Canvas QuitUI;
     [SerializeField]
     Canvas PagesUI;
+    [SerializeField]
+    Canvas WinUI;
+    [SerializeField]
+    Canvas LoseUI;
 
     bool PauseGame = false;
     bool PagesActive = false;
+    bool WinLoseActive = false;
     public BoolObject PauseMenuActive;
+    public BoolObject PlayerLost;
+    public BoolObject PlayerWin;
 
     private void Start()
     {
         //----UI----
-        HealthAndStaminaUI.enabled = true;
-        PauseMenuUI.enabled = false;
-        OptionsUI.enabled = false;
-        QuitUI.enabled = false;
-        PagesUI.enabled = false;
+        ShowHealthAndStaminaUI();
         //----UI----
 
         PauseGame = false;
         PauseMenuActive.value = false;
 
         PagesActive = false;
+        WinLoseActive = false;
 
         MouseToggel();
     }
 
     private void Update()
     {
-        if (Input.GetButtonUp("PauseMenu"))
+        if (!PlayerLost.value || !PlayerWin.value)
         {
-            switch (PauseGame)
+            if (Input.GetButtonUp("PauseMenu"))
             {
-                case true:
-                    ShowHealthAndStaminaUI();
-                    Time.timeScale = 1;
-                    PauseGame = false;
-                    PauseMenuActive.value = false;
-                    MouseToggel();
-                    break;
-                case false:
-                    ShowPauseMenu();
-                    Time.timeScale = 0;
-                    PauseGame = true;
-                    PauseMenuActive.value = true;
-                    MouseToggel();
-                    break;
+                switch (PauseGame)
+                {
+                    case true:
+                        ShowHealthAndStaminaUI();
+                        Time.timeScale = 1;
+                        PauseGame = false;
+                        PauseMenuActive.value = false;
+                        MouseToggel();
+                        break;
+                    case false:
+                        ShowPauseMenu();
+                        Time.timeScale = 0;
+                        PauseGame = true;
+                        PauseMenuActive.value = true;
+                        MouseToggel();
+                        break;
+                }
             }
-        }
 
-        if(Input.GetButtonUp("Page"))
-        {
-            switch (PagesActive)
+            if (Input.GetButtonUp("Page"))
             {
-                case true:
-                    DeactivateAllUI();
-                    PauseMenuActive.value = false;
-                    MouseToggel();
-                    PagesActive = false;
-                    ShowHealthAndStaminaUI();
-                    break;
-                case false:
-                    DeactivateAllUI();
-                    PauseMenuActive.value = true;
-                    MouseToggel();
-                    PagesUI.enabled = true;
-                    PagesActive = true;
-                    break;
+                switch (PagesActive)
+                {
+                    case true:
+                        DeactivateAllUI();
+                        PauseMenuActive.value = false;
+                        MouseToggel();
+                        PagesActive = false;
+                        ShowHealthAndStaminaUI();
+                        break;
+                    case false:
+                        DeactivateAllUI();
+                        PauseMenuActive.value = true;
+                        MouseToggel();
+                        PagesUI.enabled = true;
+                        PagesActive = true;
+                        break;
+                }
             }
+
+        }
+        else
+        {
+            if (!WinLoseActive)
+            {
+                DeactivateAllUI();
+                MouseToggel();
+
+                LoseUI.enabled = PlayerLost.value;
+                WinUI.enabled = PlayerWin.value;
+                WinLoseActive = true;
+            }
+
         }
     }
 
@@ -111,6 +132,8 @@ public class InGameUI : MonoBehaviour
         PagesUI.enabled = false;
         OptionsUI.enabled = false;
         QuitUI.enabled = false;
+        WinUI.enabled = false;
+        LoseUI.enabled = false;
     }
 
     private void MouseToggel()

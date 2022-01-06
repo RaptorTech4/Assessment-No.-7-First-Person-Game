@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class GenerateFinalScore : MonoBehaviour
@@ -15,6 +16,9 @@ public class GenerateFinalScore : MonoBehaviour
     [SerializeField]
     BoolObject playerLost;
 
+    [SerializeField]
+    TMP_Text ScoreTextOnWinScrean;
+
     bool jenerateScore = false;
 
     void Start()
@@ -27,18 +31,19 @@ public class GenerateFinalScore : MonoBehaviour
     {
         if (playerLost.value || playerWin.value)
         {
-            jenerateScore = true;
-            SetScore();
+            if (!jenerateScore)
+            {
+                SetScore();
+                jenerateScore = true;
+            }
         }
     }
 
     void SetScore()
     {
-        if (jenerateScore)
-        {
-            int myInt = Mathf.FloorToInt((timeRemaining.value * 100) / AmountOfHintsTamen.value);
-            finalScore.value = myInt;
-            jenerateScore = false;
-        }
+        int myInt = Mathf.FloorToInt((timeRemaining.value * 100) / AmountOfHintsTamen.value);
+        finalScore.value = myInt;
+        ScoreTextOnWinScrean.text = myInt.ToString();
+        jenerateScore = false;
     }
 }

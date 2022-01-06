@@ -144,10 +144,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeRemaining: {fileID: 11400000, guid: fa6d7f6026354bd45be0ae3f1ae4ca92, type: 2}
-  AmountOfHintsTamen: {fileID: 0}
+  AmountOfHintsTamen: {fileID: 11400000, guid: 373374615919d9c40a2931ea3066921f, type: 2}
   finalScore: {fileID: 11400000, guid: 22680b269d88bef43970967887882f1c, type: 2}
   playerWin: {fileID: 11400000, guid: a30e6426258372b4196a47d203e80d27, type: 2}
   playerLost: {fileID: 11400000, guid: 14e59412fc639d1448a90d639faeb375, type: 2}
+  ScoreTextOnWinScrean: {fileID: 0}
 --- !u!1 &8517453125189511732
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8517453125189511735
 Transform:
   m_ObjectHideFlags: 0
@@ -192,14 +193,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelPuzzleNumber: {fileID: 11400000, guid: a88f406bb28e76842bca28996b8955ad, type: 2}
-  PuzzleOneA: {fileID: 11400000, guid: aa626851e9ff99941a80d57bc544fb7e, type: 2}
-  PuzzleOneB: {fileID: 11400000, guid: 66dcb7914fdc73549ae506965f918846, type: 2}
-  PuzzleTwoA: {fileID: 0}
-  PuzzleTwoB: {fileID: 0}
-  PuzzleTwoC: {fileID: 0}
-  PuzzleTwoD: {fileID: 0}
-  PuzzleTwoE: {fileID: 0}
-  PuzzleThreeA: {fileID: 0}
+  PuzzleOneA: {fileID: 11400000, guid: 1eebd3a6c0d3ce24fbcdd68240f473c8, type: 2}
+  PuzzleOneB: {fileID: 11400000, guid: 6a9e271f894ab2d4e95057fb5804577c, type: 2}
+  PuzzleTwoA: {fileID: 11400000, guid: e9a218d55952e354fbd163b04c082179, type: 2}
+  PuzzleTwoB: {fileID: 11400000, guid: 2a93153de2645834cb1a27d841ec3660, type: 2}
+  PuzzleTwoC: {fileID: 11400000, guid: ba18fa23c6208e34a91dfb0ef1d4282b, type: 2}
+  PuzzleTwoD: {fileID: 11400000, guid: a349b1fe0b92e884392e2f13c5aec59c, type: 2}
+  PuzzleTwoE: {fileID: 11400000, guid: 5e21c223a5c004c4fb74ef04bbcc9d25, type: 2}
+  PuzzleThreeA: {fileID: 11400000, guid: b38c74046d4cb554a8f277c53004675d, type: 2}
 --- !u!1 &8517453125424258688
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,9 @@ public class PapperColection : MonoBehaviour
     [SerializeField]
     private BoolObject PapperActive;
 
+    [SerializeField]
+    ShowPages UpdatePagesUI;
+
     void Start()
     {
         PapperActive.value = false;
@@ -18,6 +21,11 @@ public class PapperColection : MonoBehaviour
     {
         PapperActive.value = true;
         gameObject.SetActive(false);
+
+        if(UpdatePagesUI != null)
+        {
+            UpdatePagesUI.UpdateButtons();
+        }
     }
 
 }

@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     public float lookSpeed = 2.0f;
     public float lookXLimit = 90.0f;
 
+    // BoolObject = ScriptableObject
+
     [Header("Outside var that impact player")]
     public BoolObject PauseMenuActive;
     public BoolObject PlayerLost;

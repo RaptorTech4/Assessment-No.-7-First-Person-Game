@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db17f566c7326214586b57aedbc4eaf4, type: 3}
-  m_Name: Puzzle 4 Page
+  m_Script: {fileID: 11500000, guid: c38efc90b51b6884ab346ed58c340d70, type: 3}
+  m_Name: PlayerName
   m_EditorClassIdentifier: 
-  value: 0
+  value: 
