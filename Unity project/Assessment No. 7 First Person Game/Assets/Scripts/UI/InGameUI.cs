@@ -102,6 +102,12 @@ public class InGameUI : MonoBehaviour
             }
 
         }
+
+
+        if(PauseMenuActive.value)
+        {
+            PagesActive = false;
+        }
     }
 
     private void ShowPauseMenu()
