@@ -42,41 +42,41 @@ public class ShowPages : MonoBehaviour
 
     public void UpdateButtons()
     {
-        page1Button.enabled = page1.value;
-        page2Button.enabled = page2.value;
-        page3Button.enabled = page3.value;
+        page1Button.gameObject.SetActive(page1.value);
+        page2Button.gameObject.SetActive(page2.value);
+        page3Button.gameObject.SetActive(page3.value);
     }
 
     void HideAllPages()
     {
-        page1UI.enabled = false;
-        page2UI.enabled = false;
-        page3UI.enabled = false;
+        page1UI.gameObject.SetActive(false);
+        page2UI.gameObject.SetActive(false);
+        page3UI.gameObject.SetActive(false);
     }
 
     void HideAllButtons()
     {
-        page1Button.enabled = false;
-        page2Button.enabled = false;
-        page3Button.enabled = false;
+        page1Button.gameObject.SetActive(false);
+        page2Button.gameObject.SetActive(false);
+        page3Button.gameObject.SetActive(false);
     }
 
     public void TablePuzzle()
     {
         HideAllPages();
-        page1UI.enabled = true;
+        page1UI.gameObject.SetActive(true);
     }
 
     public void OfficeTable()
     {
         HideAllPages();
-        page1UI.enabled = true;
+        page2UI.gameObject.SetActive(true);
     }
 
     public void Door()
     {
         HideAllPages();
-        page1UI.enabled = true;
+        page3UI.gameObject.SetActive(true);
     }
 
 }

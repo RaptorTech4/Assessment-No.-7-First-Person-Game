@@ -100,8 +100,6 @@ public class PuckMovement : MonoBehaviour
     {
         canMove.value = false;
         movePuckTo = new Vector3(hitpoint.x - direction.x, hitpoint.y - direction.y, hitpoint.z - direction.z);
-        
-        Debug.Log("MoveTo" + hitpoint);
 
         StartCoroutine(LerpPosition(movePuckTo, 3));
     }
