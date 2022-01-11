@@ -32,6 +32,6 @@ public class UnlockedSecondLevel : MonoBehaviour
 
     void UpdateAnim()
     {
-        anim.Play("FirePlaceDoors");
+        anim.Play("OfficeTableOpen");
     }
 }
