@@ -2,16 +2,22 @@ using UnityEngine;
 
 public class TimerCountDown : MonoBehaviour
 {
-    public FloatObject timeRemaining;
 
-    void Update()
+    [SerializeField] FloatObject timeRemaining;
+
+    private void Awake()
+    {
+        InvokeRepeating("RemoveSecondFromTimer", 5, 1);  
+    }
+
+    void RemoveSecondFromTimer()
     {
         if (timeRemaining.value > 0f)
         {
-            timeRemaining.value -= Time.deltaTime;
+            timeRemaining.value--;
         }
 
-        if(timeRemaining.value<0f)
+        if(timeRemaining.value < 0f)
         {
             timeRemaining.value = 0f;
         }

@@ -10,17 +10,15 @@ public class ShowTimeAsText : MonoBehaviour
     [SerializeField]
     FloatObject currentTimeLeft;
 
-    private void Update()
+    private void Start()
     {
-        DisplayTime(currentTimeLeft.value);
+        InvokeRepeating("DisplayTime", 1, 1);
     }
 
-    void DisplayTime(float timeToDisplay)
+    void DisplayTime()
     {
-        //timeToDisplay += 1;
-
-        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
-        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+        float minutes = Mathf.FloorToInt(currentTimeLeft.value / 60);
+        float seconds = Mathf.FloorToInt(currentTimeLeft.value % 60);
 
         outputText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
