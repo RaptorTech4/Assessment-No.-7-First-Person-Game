@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = 20.0f;
 
     [Header("Camera")]
-    public Camera playerCamera;
+    private Camera playerCamera;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 90.0f;
 
@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        playerCamera = Camera.main;
     }
 
     void Update()

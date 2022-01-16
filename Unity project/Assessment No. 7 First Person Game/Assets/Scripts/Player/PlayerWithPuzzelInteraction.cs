@@ -5,9 +5,14 @@ using UnityEngine;
 public class PlayerWithPuzzelInteraction : MonoBehaviour
 {
 
-    public GameObject playerCamera;
+    private GameObject playerCamera;
 
     public LayerMask raycastNotToHit;
+
+    private void Start()
+    {
+        playerCamera = Camera.main.gameObject;
+    }
 
     // Update is called once per frame
     void Update()
@@ -91,12 +96,23 @@ public class PlayerWithPuzzelInteraction : MonoBehaviour
     public void ButtonOnTable(GameObject hit)
     {
         hit.GetComponent<ButtonPressed>().SetMoveDirectionOn();
+
+        if (hit.transform.GetComponent<PlaySound>() != null)
+        {
+            hit.transform.GetComponent<PlaySound>().PlayASound();
+        }
     }
 
     public void HelpButton(GameObject hit)
     {
         hit.GetComponent<HintButtonPressed>().ShowHint();
+
         hit.GetComponent<HelpTimer>().ButtonPressedCheck();
+
+        if (hit.transform.GetComponent<PlaySound>() != null)
+        {
+            hit.transform.GetComponent<PlaySound>().PlayASound();
+        }
     }
 
     public void ActivateTable(GameObject hit)
