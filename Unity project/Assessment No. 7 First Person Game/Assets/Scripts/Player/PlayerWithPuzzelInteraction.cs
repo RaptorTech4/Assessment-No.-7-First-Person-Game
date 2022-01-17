@@ -9,6 +9,13 @@ public class PlayerWithPuzzelInteraction : MonoBehaviour
 
     public LayerMask raycastNotToHit;
 
+    [SerializeField]
+    private BoolObject playerWin;
+    [SerializeField]
+    private BoolObject playerLose;
+    [SerializeField]
+    private BoolObject playerPaused;
+
     private void Start()
     {
         playerCamera = Camera.main.gameObject;
@@ -18,45 +25,49 @@ public class PlayerWithPuzzelInteraction : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+
+        if (playerWin.value == false && playerLose.value == false && playerPaused.value == false)
         {
-            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 10.0f, raycastNotToHit))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-
-                //Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward, Color.green);
-
-                if (hit.collider != null)
+                if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 10.0f, raycastNotToHit))
                 {
-                    if (hit.transform.gameObject.tag == "KeyPad")
-                    {
-                        KeyPad(hit.transform.gameObject);
-                    }
 
-                    if(hit.transform.gameObject.tag == "WheelPuzzel")
-                    {
-                        RotateWheel(hit.transform.gameObject);
-                    }
+                    //Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward, Color.green);
 
-                    if (hit.transform.gameObject.tag == "TablePuzzelButtons")
+                    if (hit.collider != null)
                     {
-                        ButtonOnTable(hit.transform.gameObject);
-                    }
+                        if (hit.transform.gameObject.tag == "KeyPad")
+                        {
+                            KeyPad(hit.transform.gameObject);
+                        }
 
-                    if (hit.transform.gameObject.tag == "Help")
-                    {
-                        HelpButton(hit.transform.gameObject);
-                    }
+                        if (hit.transform.gameObject.tag == "WheelPuzzel")
+                        {
+                            RotateWheel(hit.transform.gameObject);
+                        }
 
-                    if (hit.transform.gameObject.tag == "ActivateTable")
-                    {
-                        ActivateTable(hit.transform.gameObject);
-                    }
+                        if (hit.transform.gameObject.tag == "TablePuzzelButtons")
+                        {
+                            ButtonOnTable(hit.transform.gameObject);
+                        }
 
-                    if (hit.transform.gameObject.tag == "Papper")
-                    {
-                        ActivatePapper(hit.transform.gameObject);
-                    }
+                        if (hit.transform.gameObject.tag == "Help")
+                        {
+                            HelpButton(hit.transform.gameObject);
+                        }
 
+                        if (hit.transform.gameObject.tag == "ActivateTable")
+                        {
+                            ActivateTable(hit.transform.gameObject);
+                        }
+
+                        if (hit.transform.gameObject.tag == "Papper")
+                        {
+                            ActivatePapper(hit.transform.gameObject);
+                        }
+
+                    }
                 }
             }
         }

@@ -8141,6 +8141,17 @@ MonoBehaviour:
   - {fileID: 2100000, guid: af21ca75ae2946d4fb79952729400002, type: 2}
   - {fileID: 2100000, guid: 1ff3a835c1bf0b640b2fafe6f42ad1d5, type: 2}
   - {fileID: 2100000, guid: 51cbce08a201bc54fa90beecd35effac, type: 2}
+--- !u!114 &358432049 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1846004289, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+  m_PrefabInstance: {fileID: 1684601755}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &360411545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35622,6 +35633,17 @@ MonoBehaviour:
   - {fileID: 2100000, guid: af21ca75ae2946d4fb79952729400002, type: 2}
   - {fileID: 2100000, guid: 1ff3a835c1bf0b640b2fafe6f42ad1d5, type: 2}
   - {fileID: 2100000, guid: 51cbce08a201bc54fa90beecd35effac, type: 2}
+--- !u!114 &1389464883 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1402972448, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+  m_PrefabInstance: {fileID: 1684601755}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38b86c29a9547c49b0e45df1e288460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1390053820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43717,6 +43739,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 334531690, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: m_text
+      value: SAVE AND BACK TO MAIN MENU
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402972448, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: PlayerNameInput
+      value: 
+      objectReference: {fileID: 358432049}
+    - target: {fileID: 1748666705, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748666705, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748666705, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1389464883}
+    - target: {fileID: 1748666705, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748666705, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddHighScoreEntry
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748666705, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HighscoreTable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748666705, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3204456865284871778, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
       propertyPath: m_Name
       value: Player
@@ -43764,6 +43822,22 @@ PrefabInstance:
     - target: {fileID: 3204456865284871789, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204456865284871790, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: playerWin
+      value: 
+      objectReference: {fileID: 11400000, guid: a30e6426258372b4196a47d203e80d27, type: 2}
+    - target: {fileID: 3204456865284871790, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: playerLose
+      value: 
+      objectReference: {fileID: 11400000, guid: 14e59412fc639d1448a90d639faeb375, type: 2}
+    - target: {fileID: 3204456865284871790, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: playerPaused
+      value: 
+      objectReference: {fileID: 11400000, guid: 744f377be3c61b4458b0a7838126ef82, type: 2}
+    - target: {fileID: 3204456867312479182, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d301ee94d6b93ba42b6d36f144fbeb41, type: 3}

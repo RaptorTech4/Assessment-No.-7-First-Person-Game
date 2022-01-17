@@ -44,7 +44,7 @@ public class InGameUI : MonoBehaviour
 
     private void Update()
     {
-        if (!PlayerLost.value || !PlayerWin.value)
+        if (PlayerLost.value == false && PlayerWin.value == false)
         {
             if (Input.GetButtonUp("PauseMenu"))
             {
@@ -94,6 +94,7 @@ public class InGameUI : MonoBehaviour
             if (!WinLoseActive)
             {
                 DeactivateAllUI();
+                PauseMenuActive.value = true;
                 MouseToggel();
 
                 LoseUI.enabled = PlayerLost.value;
